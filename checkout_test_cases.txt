@@ -1,0 +1,104 @@
+Manual Test Cases for deomoblaze.com
+
+Pre-conditions: (i) Demoblaze.com is up and running
+
+(a) Test Case 1: Ensure the product is same on PDP Page when clicked on a particular product
+    
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the product 
+                     (iii) Verify that product clicked is same on next page
+
+    Expected result: pass
+    Actual result: pass
+
+(b) Test Case 2: Ensure the Product Price is listed on PDP page
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the Product
+                     (iii) Verify that Product Price is listed on page.
+
+    Expected result: pass
+    Actual result: pass
+
+
+(c) Test Case 3: Ensure the Product Description is listed on the PDP page
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the Product
+                     (iii) Verify that Product description is visible and properly mentioned.
+
+    Expected result: pass
+    Actual result: pass
+
+
+(d) Test Case 4: Ensure the Add to cart is working on PDP page
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the Product
+                     (iii) Click on Add to Cart and Verify that Add to Cart is functionable and alert box is displayed.
+
+    Expected result: pass
+    Actual result: pass
+
+
+(e) Test Case 5: Ensure the product is same on the Cart
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the Product
+                     (iii) Click on Add to Cart and then Click on Cart to verify the Product is same.
+
+    Expected result: pass
+    Actual result: pass
+
+
+(f) Test Case 6: Ensure the Place Order is functionable
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the Product and then on Add to Cart
+                     (iii) Visit the Cart and click on Place Order, verify that Place Order is functionable
+    
+    Expected result: pass
+    Actual result: pass
+
+
+(g) Test Case 7: Ensure user can easily write inputs in Place Order form
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the Product and then on Add to Cart
+                     (iii) Visit the Cart and Click on Place Order
+                     (iv) Fill all the necessary input fields in Place order form, to ensure form is working correctly
+
+    Expected result: pass
+    Actual result: pass
+
+
+(h) Test Case 8: Ensure Purchase button is working
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the Product and then on Add to Cart
+                     (iii) Visit the cart, click on Place order, fill the place order form,
+                     (iv) Click on Purchase button, Verify purchase button is working and you see successfull message of purchase
+
+    Expected result: pass
+    Actual result: pass
+
+(i) Test Case 9: Ensure Different Product Category are working
+
+    Test Case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on the different categories i.e. Phones, Laptops,Monitors
+                     (iii) Ensure specific product are listed as per the category choosen
+
+    Expected result: pass
+    Actual result: pass
+
+(j) Test Case 10: Ensure Website Logo is displayed
+
+    Test case Steps: (i) Visit the demoblaze.com
+                     (ii) Click on Home
+                     (iii) Verify the Home logo
+
+    Expected result: pass
+    Actual result: pass
+
+
+
