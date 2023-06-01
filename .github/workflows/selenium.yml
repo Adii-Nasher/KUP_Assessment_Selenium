@@ -30,5 +30,16 @@ jobs:
       
       - run: chrome --version
       
+      - run: mvn clean
+      
       - name: Run Selenium tests
-        run: mvn test
+        run: mvn surefire-report:report-only surefire-report:report -DoutputDirectory=$PWD/target/surefire-reports -DoutputName=emailable-report.html
+      
+      - name: Archive HTML report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Selenium-report
+          path: |
+                target/site/surefire-report
+                target/surefire-reports/emailable-report.html
+          retention-days: 30
