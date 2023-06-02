@@ -1,10 +1,8 @@
 package checkout;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
 
 public class Setup {
 
@@ -15,7 +13,7 @@ public class Setup {
 
     Cart cart;
 
-    @Before
+    @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/");
@@ -28,57 +26,57 @@ public class Setup {
         cart = new Cart(driver);
     }
 
-    @After
+    @AfterMethod
     public void teardown() {
         driver.quit();
     }
 
     @Test
-    public void verifyProductTest() {
+    public void verifyProduct() {
         pdp.verifyProductIsSameOnPDP();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyProduct")
     public void verifyHomeLogo() {
         homepage.verifyHomeLogo();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyHomeLogo")
     public void verifyProductPrice() {
         pdp.verifyProductPriceIsListedOnPDP();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyProductPrice")
     public void verifyProductDescription() {
         pdp.verifyProductDescriptionOnPDP();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyProductDescription")
     public void verifyAddToCart() {
         pdp.verifyAddToCart();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyAddToCart")
     public void verifyProductCategory() {
         homepage.verifyProductCategory();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyProductCategory")
     public void verifyItemInCart() {
         cart.clickOnCart();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyItemInCart")
     public void verifyPlaceOrderButton() {
         cart.clickOnPlaceOrder();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyPlaceOrderButton")
     public void verifyPlaceOrderInput() {
         cart.inputOnPlaceOrder();
     }
 
-    @Test
+    @Test (dependsOnMethods = "verifyPlaceOrderInput")
     public void verifyPlaceOrder() {
         cart.placeOrder();
     }
