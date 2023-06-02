@@ -20,20 +20,20 @@ jobs:
         with:
           ref: feature/Selenium
           
-      - name: Set up JDK 11
+      - name: Install Java
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'  
           
-      - uses: browser-actions/setup-chrome@latest
-      
-      - run: chrome --version
-      
-      - run: mvn clean
-      
+      - name: Install Google Chrome
+        uses: browser-actions/setup-chrome@latest
+
+      - name: Compile Selenium Code
+        run: mvn clean
+
       - name: Run Selenium tests
-        run: mvn surefire-report:report-only surefire-report:report -DoutputDirectory=$PWD/target/surefire-reports -DoutputName=emailable-report.html
+        run: mvn test
       
       - name: Archive HTML report
         uses: actions/upload-artifact@v2
@@ -41,5 +41,4 @@ jobs:
           name: Selenium-report
           path: |
                 target/site/surefire-report
-                target/surefire-reports/emailable-report.html
           retention-days: 30
